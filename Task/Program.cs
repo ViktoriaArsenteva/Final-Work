@@ -19,7 +19,10 @@ string[] ArrayStringsLenghtLessThanThree(string[] array)
             j++;
         }
     }
-    Array.Resize(ref NewArray, j);
+    if (j < NewArray.Length)
+    {
+        Array.Resize(ref NewArray, j);
+    }
     return NewArray;
 }
 void PrintArray(string[] Array)
